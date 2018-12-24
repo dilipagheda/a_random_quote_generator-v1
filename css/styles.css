@@ -1,0 +1,129 @@
+/* Random Quote Generator Styles */
+* {
+  box-sizing: border-box;
+}
+body {
+  background-color: #36b55c;
+  color: white;
+  font-family: 'Playfair Display', serif;
+}
+.category{
+  font-weight: bolder;
+  letter-spacing: 0.5rem;
+  text-transform: uppercase;
+}
+
+.container {
+  width:80%;
+  margin:auto;
+  display: flex;
+  flex-direction: column;
+}
+#quote-box {
+  margin-top:10%;
+  line-height: .5;
+}
+
+.quote {
+  font-size: 4rem;
+  font-weight: 400;
+  line-height: 1.1;
+  text-align: left;
+  margin: 0;
+}
+
+.source {
+  font-size: 1.25rem;;
+  letter-spacing: 0.05em;
+  line-height: 1.1;
+  text-align: right;
+  margin-right: 4em;
+}
+
+.source:before {
+  content: "—";
+}
+
+.citation {
+  font-style: italic;
+}
+
+.citation:before {
+  content: ", ";
+  font-style: normal;
+}
+
+.year:before {
+  content: ", ";
+  font-style: normal;
+}
+
+#loadQuote {
+  width: 12em;
+  align-self: center;
+  border-radius: 4px;
+  border: 2px solid #fff;
+  color: #fff;
+  background-color: #36b55c;
+  padding: 15px 0;
+  transition: .5s ;
+}
+#loadQuote:hover {
+  background-color: rgba(255,255,255,.25);
+}
+
+#loadQuote:focus {
+  outline: none;
+}
+
+@media (max-width: 420px) {
+  .container{
+    width: 90%;
+    margin:auto;
+  }
+ #quote-box{
+  margin-top:30%;
+  width: 100%;
+  }
+
+  .quote {
+    font-size: 1.5rem;
+  }
+  .quote:before, .quote:after {
+    font-size: 2rem;
+  }
+  .source {
+    font-size: 1rem;
+    margin:30px 0 0 0;
+
+  }
+  .source span{
+    display:block;
+  }
+  .citation:before {
+    content: "";
+    font-style: normal;
+  }
+  
+  .year:before {
+    content: "";
+    font-style: normal;
+  }
+}
+
+@media (min-width:421px) and (max-width: 768px) {
+ 
+  .quote {
+    font-size: 3rem;
+  }
+  .quote:before, .quote:after {
+    font-size: 3.5rem;
+  }
+  .source {
+    font-size: 2rem;
+    margin:30px;
+
+  }
+ 
+}
+
