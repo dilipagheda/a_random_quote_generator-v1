@@ -82,6 +82,9 @@ let quotes = [
 
 
 let randomNumber=-1;
+const TIMEOUT_PERIOD = 20000;
+//function to change quote every 20 seconds.
+var timer = setInterval(printQuote, TIMEOUT_PERIOD);
 
 /***
 getRandomQuote function generates a random number between 0 and the length of the quotes array.
@@ -104,6 +107,8 @@ the quote-box div.
 ***/
 
 function printQuote(){
+  //stop the timer first
+  clearInterval(timer);
   let quoteItem = getRandomQuote();
 
   let htmlString = `
@@ -137,6 +142,10 @@ function printQuote(){
     button.style.backgroundColor = quoteItem.colors.color;
     button.style.color = quoteItem.colors.background;
   });
+
+  //start the timer again
+  timer = setInterval(printQuote, TIMEOUT_PERIOD);
+
 }
 
 //helper function to conditionally get citation 
@@ -165,8 +174,7 @@ function getCategory(quoteItem){
   }
   return p;
 }
-//function to change quote every 20 seconds.
-setInterval(printQuote, 20000);
+
 
 /***
 Click Listener for getting the new quote using printQuote function
