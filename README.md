@@ -14,3 +14,6 @@ In the first version, following features are implemented:
 
 This project is a fun and effective way for me to practice fundamental JavaScript skills while also creating a simple interactive portfolio piece to showcase your understanding of JavaScript fundamentals.
 
+## How to install
+- Download the folder in your local drive and open index.html
+- You can access it live at http://dilipagheda.com/a_random_quote_generator-v1/
